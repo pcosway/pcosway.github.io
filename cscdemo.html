@@ -152,6 +152,7 @@ Date.prototype.format = function (mask, utc) {
     height="400"></iframe>
    <script>
      var now = new Date();
+	now.setHours(now.getHours() + 1);
      var midnight = new Date();
      alert(now.format("yyyy-mm-dd%20hh:MM:ss"));
      // midnight.format("&time_start=yyyy-mm-dd%2000:00:00");
