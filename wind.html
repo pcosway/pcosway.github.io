@@ -154,7 +154,7 @@ Date.prototype.format = function (mask, utc) {
 	<p>Courageous Wind History</p>
 		  <img id="cscsix" src="" height="400" width="800">
 	<p>Logan Airport Wind History</p>
-		<img id="logansix" src="https://api.weatherflow.com/wxengine/rest/graph/getGraph?spot_id=768&time_start=2024-06-20%2000:00:00&time_end=2024-06-20%2024:00:00&units_wind=kts&units_precip=in&fields=wind&wf_token=fbc8a5348f2ac8bca02cebc0d623d6c2&color_plot_bg=0xFAFAFA&wind_speed_floor=31&graph_height=330&graph_width=635&type=line3&format=raw&v=1.1&cb=1718748456369" height="400" width="800">
+		<img id="logansix" src="" height="400" width="800">
 
 <!--	  <img id="cscnow" src="" height="400" width="800">-->
 	
@@ -166,6 +166,7 @@ Date.prototype.format = function (mask, utc) {
 	   sixearlier.setHours(sixearlier.getHours() -6);
      // midnight.format("&time_start=yyyy-mm-dd%2000:00:00");
      var newsrc = "https://api.weatherflow.com/wxengine/rest/graph/getGraph?spot_id=1842";
+	var logsrc = "https://api.weatherflow.com/wxengine/rest/graph/getGraph?spot_id=768";
      newsrc += "&time_start="+midnight.format("yyyy-mm-dd%2000:00:00");
      newsrc += "&time_end="+now.format("yyyy-mm-dd%20HH:MM:ss");
      newsrc += "&units_wind=kts&units_precip=in&fields=wind&wf_token=fbc8a5348f2ac8bca02cebc0d623d6c2&color_plot_bg=0xFAFAFA&wind_speed_floor=31&graph_height=330&graph_width=635&type=line3&format=raw&v=1.1&cb=1718748456369"
@@ -173,11 +174,14 @@ Date.prototype.format = function (mask, utc) {
      
 	newsrc = "https://api.weatherflow.com/wxengine/rest/graph/getGraph?spot_id=1842";
      newsrc += "&time_start="+sixearlier.format("yyyy-mm-dd%20HH:00:00");  // start on the hour for time alignment issues
-
      newsrc += "&time_end="+now.format("yyyy-mm-dd%20HH:MM:ss");
+logsrc += "&time_start="+sixearlier.format("yyyy-mm-dd%20HH:00:00");  // start on the hour for time alignment issues
+     logsrc += "&time_end="+now.format("yyyy-mm-dd%20HH:MM:ss");
 //alert(newsrc);
      newsrc += "&units_wind=kts&units_precip=in&fields=wind&wf_token=fbc8a5348f2ac8bca02cebc0d623d6c2&color_plot_bg=0xFAFAFA&wind_speed_floor=31&graph_height=330&graph_width=635&type=line3&format=raw&v=1.1&cb=1718748456369"
      document.getElementById("cscsix").src=newsrc;
+logsrc += "&units_wind=kts&units_precip=in&fields=wind&wf_token=fbc8a5348f2ac8bca02cebc0d623d6c2&color_plot_bg=0xFAFAFA&wind_speed_floor=31&graph_height=330&graph_width=635&type=line3&format=raw&v=1.1&cb=1718748456369"
+     document.getElementById("logansix").src=logsrc;
     //document.getElementById("cscnow").src="https://api.weatherflow.com/wxengine/rest/graph/getGraph?spot_id=1842&time_start=2024-06-20%2000:00:00&time_end=2024-06-20%2024:00:00&units_wind=kts&units_precip=in&fields=wind&wf_token=fbc8a5348f2ac8bca02cebc0d623d6c2&color_plot_bg=0xFAFAFA&wind_speed_floor=31&graph_height=330&graph_width=635&type=line3&format=raw&v=1.1&cb=1718748456369";
     </script>
   
