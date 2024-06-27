@@ -131,6 +131,7 @@ Date.prototype.format = function (mask, utc) {
 
 
   </head>
+	<body>
 <!--  Web page data can go here
   <br><br>
 	-->
@@ -159,10 +160,10 @@ Indirect entry via Google Sheet - <a href="https://docs.google.com/spreadsheets/
 	<iframe align="top" src="https://widgets.windalert.com/widgets/web/conditions?spot_id=1842&units_wind=mph&units_temp=F&width=300&height=400&color=870100&name=Courageous Sailing Center&activity=Other&app=windalert" width="300" height="400" frameborder="0" scrolling="no" allowtransparency="no"></iframe>
 <br>
 Done with an iframe:
-		<pre>
+<pre>
 <iframe src="https://widgets.windalert.com/widgets/web/conditions?spot_id=1842&units_wind=mph&units_temp=F&width=300&height=400&color=870100&name=Courageous%20Sailing%20Center&activity=Other&app=windalert%20&wf_token=fbc8a5348f2ac8bca02cebc0d623d6c2"
     height="400"></iframe>
-		</pre>
+</pre>
   <p>
 	Wind history - from midnight - with padding after "now"
 	</p>
@@ -198,4 +199,5 @@ Done with an iframe:
      document.getElementById("cscsix").src=newsrc;
     //document.getElementById("cscnow").src="https://api.weatherflow.com/wxengine/rest/graph/getGraph?spot_id=1842&time_start=2024-06-19%2000:00:00&time_end=2024-06-19%2024:00:00&units_wind=kts&units_precip=in&fields=wind&wf_token=fbc8a5348f2ac8bca02cebc0d623d6c2&color_plot_bg=0xFAFAFA&wind_speed_floor=31&graph_height=330&graph_width=635&type=line3&format=raw&v=1.1&cb=1718748456369";
     </script>
+</body>
 </html>
