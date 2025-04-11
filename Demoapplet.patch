@@ -1,0 +1,13 @@
+diff --git a/src/squeezeplay/share/applets/Demo/DemoApplet.lua b/src/squeezeplay/share/applets/Demo/DemoApplet.lua
+index ef7b25dc9..81b6e9e88 100644
+--- a/src/squeezeplay/share/applets/Demo/DemoApplet.lua
++++ b/src/squeezeplay/share/applets/Demo/DemoApplet.lua
+@@ -1,7 +1,7 @@
+ 
+ -- stuff we use
+ local ipairs, pairs, setmetatable, tostring, tonumber  = ipairs, pairs, setmetatable, tostring, tonumber
+-
++-- Edited by PRC
+ local oo            = require("loop.simple")
+ local lfs           = require("lfs")
+ local math          = require("math")
