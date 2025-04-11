@@ -1,0 +1,7 @@
+<patch name="Patch Test Demo" target="baby" version="1.0" minTarget="8.5" maxTarget="9.5">
+    <title lang="EN">Demo - patch test</title>
+    <desc lang="EN">Adds a comment to DemoApplet.lua</desc>
+    <creator>Paul Cosway</creator>
+    <url>http://pcosway.github.io/Demoapplet.patch</url>
+    <sha>b95eddc5e11e0e736fdb86dc5f3d73e00c08c2b96cb50267052d4a8666ca14e4</sha>
+</patch>
