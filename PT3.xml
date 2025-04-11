@@ -1,0 +1,13 @@
+<extensions>
+<details>
+<title lang="EN">Test repo</title>
+</details>
+<patches><patch name="Patch Test Demo" target="baby" version="1.01" minTarget="8.5" maxTarget="9.5">
+    <title lang="EN">Demo - patch test</title>
+    <desc lang="EN">Adds a comment to DemoApplet.lua</desc>
+    <creator>Paul Cosway</creator>
+    <url>http://pcosway.github.io/Demoapplet.patch</url>
+    <sha>43f10e21425912850042fcaf9ae80c7d7abe44e9</sha>
+</patch>
+</patches>
+    </extensions>
