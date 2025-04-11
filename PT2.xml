@@ -2,7 +2,7 @@
 <details>
 <title lang="EN">Test repo</title>
 </details>
-<patches><patch name="Patch Test Demo" target="baby" version="1.0" minTarget="8.5" maxTarget="9.5">
+<patches><patch name="Patch Test Demo" target="baby" version="1.01" minTarget="8.5" maxTarget="9.5">
     <title lang="EN">Demo - patch test</title>
     <desc lang="EN">Adds a comment to DemoApplet.lua</desc>
     <creator>Paul Cosway</creator>
