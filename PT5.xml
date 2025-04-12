@@ -6,8 +6,8 @@
     <title lang="EN">Demo - patch test 2</title>
     <desc lang="EN">Adds a comment to DemoApplet.lua</desc>
     <creator>Paul Cosway</creator>
-    <url>http://pcosway.github.io/Demoapplet.patch</url>
-    <sha>da39a3ee5e6b4b0d3255bfef95601890afd80709</sha>
+    <url>https://pcosway.github.io/Demoapplet.patch</url>
+    <sha>3adb1f02d5b6054de0046e367c1d687b6cdf7aff</sha>
 </patch>
 </patches>
     </extensions>
