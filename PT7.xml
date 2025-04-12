@@ -3,7 +3,7 @@
 <title lang="EN">Test repo</title>
 </details>
 <patches><patch name="Patch Test Demo 3" target="baby" version="1.04" minTarget="8.5" maxTarget="9.5">
-    <title lang="EN">Demo - patch test 2</title>
+    <title lang="EN">Demo - patch test 3</title>
     <desc lang="EN">Adds a comment to DemoApplet.lua</desc>
     <creator>Paul Cosway</creator>
     <url>https://pcosway.github.io/Demo.patch</url>
