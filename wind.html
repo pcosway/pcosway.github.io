@@ -225,8 +225,9 @@ Date.prototype.format = function (mask, utc) {
 	var timestr = "&time_start="+sixearlier.format("yyyy-mm-dd%20HH:00:00");  // start on the hour for time alignment issues
      	timestr += "&time_end="+now.format("yyyy-mm-dd%20HH:MM:ss");
 //alert(newsrc);
-     	newsrc += timestr+"&units_wind=mph&units_precip=in&fields=wind&wf_token=3123353fa4c254c7e566ebb914c37ffa&color_plot_bg=0xFAFAFA&wind_speed_floor=31&graph_height=330&graph_width=635&type=line3&format=raw&v=1.1&cb=1718748456369";
-	logsrc += timestr+"&units_wind=mph&units_precip=in&fields=wind&wf_token=cb5c7d2ee3712e938ffbb64d421c723f&color_plot_bg=0xFAFAFA&wind_speed_floor=31&graph_height=330&graph_width=635&type=line3&format=raw&v=1.1&cb=1718748456369";
+	   // width has been 635
+     	newsrc += timestr+"&units_wind=mph&units_precip=in&fields=wind&wf_token=3123353fa4c254c7e566ebb914c37ffa&color_plot_bg=0xFAFAFA&wind_speed_floor=31&graph_height=330&graph_width=1000&type=line3&format=raw&v=1.1&cb=1718748456369";
+	logsrc += timestr+"&units_wind=mph&units_precip=in&fields=wind&wf_token=cb5c7d2ee3712e938ffbb64d421c723f&color_plot_bg=0xFAFAFA&wind_speed_floor=31&graph_height=330&graph_width=1000&type=line3&format=raw&v=1.1&cb=1718748456369";
      	document.getElementById("cscsix").src=newsrc+"&spot_id=1842";
 	document.getElementById("logansix").src=logsrc+"&spot_id=768";
 	document.getElementById("deersix").src=newsrc+"&spot_id=1784";   
