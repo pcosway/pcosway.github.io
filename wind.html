@@ -223,7 +223,7 @@ Date.prototype.format = function (mask, utc) {
      // midnight.format("&time_start=yyyy-mm-dd%2000:00:00");
 	var logsrc = "https://api.weatherflow.com/wxengine/rest/graph/getGraph?";
 	var newsrc = "https://api.weatherflow.com/wxengine/rest/graph/getGraph?";
-	var timestr = "&time_start="+sixearlier.format("yyyy-mm-dd%20HH:00:00");  // start on the hour for time alignment issues
+	var timestr = "time_start="+sixearlier.format("yyyy-mm-dd%20HH:00:00");  // start on the hour for time alignment issues
      	timestr += "&time_end="+now.format("yyyy-mm-dd%20HH:MM:ss");
 //alert(newsrc);
 	   // width has been 635
