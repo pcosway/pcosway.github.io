@@ -213,7 +213,8 @@ Date.prototype.format = function (mask, utc) {
 	personal --  cb5c7d2ee3712e938ffbb64d421c723f
 	old -- 49cb8e9efbe3986240163d2ca820a2ff
 	-->	
-<!-- spot_id= CSC:  1842, Boston Shipyard: 1839, Logan: 768 Harvard Bridge 1834 Deer Island 1784  &wf_token=3123353fa4c254c7e566ebb914c37ffa -->	
+<!-- spot_id= CSC:  1842, Boston Shipyard: 1839, Logan: 768 Harvard Bridge 1834 Deer Island 1784  &wf_token=3123353fa4c254c7e566ebb914c37ffa -->
+	<!-- my token was cda3409523aa90e616b423fc8b1c8502 - trying one from phone app -->
    <script>
      var now = new Date();
 	now.setHours(now.getHours() + 1);
@@ -228,7 +229,7 @@ Date.prototype.format = function (mask, utc) {
 //alert(newsrc);
 	   // width has been 635
      	newsrc += timestr+"&units_wind=mph&units_precip=in&fields=wind&wf_token=3123353fa4c254c7e566ebb914c37ffa&color_plot_bg=0xFAFAFA&wind_speed_floor=31&graph_height=330&graph_width=1200&type=line3&format=raw&v=1.1&cb=1718748456369";
-	logsrc += timestr+"&units_wind=mph&units_precip=in&fields=wind&wf_token=cda3409523aa90e616b423fc8b1c8502&color_plot_bg=0xFAFAFA&wind_speed_floor=31&graph_height=330&graph_width=1200&type=line3&format=raw&v=1.1&cb=1718748456369";
+	logsrc += timestr+"&units_wind=mph&units_precip=in&fields=wind&wf_token=358277d6b016eaf49ffd46a4f21de167&color_plot_bg=0xFAFAFA&wind_speed_floor=31&graph_height=330&graph_width=1200&type=line3&format=raw&v=1.1&cb=1718748456369";
      	document.getElementById("cscsix").src=newsrc+"&spot_id=1842";
 	document.getElementById("logansix").src=logsrc+"&spot_id=768";
 	document.getElementById("deersix").src=newsrc+"&spot_id=1784";   
