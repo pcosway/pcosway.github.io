@@ -1,0 +1,9 @@
+[playlist]
+NumberOfEntries=7
+File1=https://live-hls-audio-web-aje.getaj.net/VOICE-AJE/01.m3u8
+File2=https://live-hls-web-aje-gcp.thehlive.com/VOICE-AJE/01.m3u8
+File3=https://live-hls-audio-web-aje.getaj.net/VOICE-AJE/01.m3u8
+File4=https://live-hls-web-aje-gcp.thehlive.com/VOICE-AJE/01.m3u8
+File5=https://live-hls-audio-web-aje.getaj.net/VOICE-AJE/01.m3u8
+File6=https://live-hls-web-aje-gcp.thehlive.com/VOICE-AJE/01.m3u8
+File7=https://pcosway.github.io/ajradio.pls
