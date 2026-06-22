@@ -180,7 +180,7 @@ var now = new Date();
 now.setHours(now.getHours() + 1);
 var sixearlier = new Date();
 	   sixearlier.setHours(sixearlier.getHours() -6);
-     
+     alert(WF_TOKEN);
 newsrc = "https://api.weatherflow.com/wxengine/rest/graph/getGraph?spot_id=1842";
 newsrc += "&time_start="+sixearlier.format("yyyy-mm-dd%20HH:00:00");  // start on the hour for time alignment issues
 newsrc += "&time_end="+now.format("yyyy-mm-dd%20HH:MM:ss");
