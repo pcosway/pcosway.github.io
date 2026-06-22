@@ -4,6 +4,8 @@
 	<head>
   
     <script>
+const WF_TOKEN = "f74404872fb9ccdb07dc6b485b4e6867";
+		
     /*
  * Date Format 1.2.3
  * (c) 2007-2009 Steven Levithan <stevenlevithan.com>
@@ -136,9 +138,9 @@ Date.prototype.format = function (mask, utc) {
 	<!-- CSC:  1842, Boston Shipyard: 1839, Logan: 768 Harvard Bridge 1834 Deer Island 1784  &wf_token=3123353fa4c254c7e566ebb914c37ffa -->
 <div style="width:1220px">
 <iframe align="top" src="https://widgets.windalert.com/widgets/web/conditions?spot_id=1834&units_wind=mph&units_temp=F&width=300&height=400&color=870100&name=Harvard Bridge&activity=Other&app=windalert" width="300" height="400" frameborder="0" scrolling="no" allowtransparency="no"></iframe>
-<iframe align="top" src="https://widgets.windalert.com/widgets/web/conditions?spot_id=1842&units_wind=mph&units_temp=F&width=300&height=400&color=870100&name=Courageous%20Sailing%20Center&activity=Other&app=windalert%20&wf_token=f74404872fb9ccdb07dc6b485b4e6867" width="300" height="400" frameborder="0" scrolling="no" allowtransparency="no"></iframe>	
+<iframe id="cscsnap" align="top"  width="300" height="400" frameborder="0" scrolling="no" allowtransparency="no"></iframe>	
 <iframe align="top" src="https://widgets.windalert.com/widgets/web/conditions?spot_id=768&units_wind=mph&units_temp=F&width=300&height=400&color=870100&name=Logan%20Airport&activity=Sail&app=windalert" width="300" height="400" frameborder="0" scrolling="no" allowtransparency="no"></iframe>
-<iframe align="top" src="https://widgets.windalert.com/widgets/web/conditions?spot_id=1784&units_wind=mph&units_temp=F&width=300&height=400&color=870100&name=Deer%20Island&activity=Other&app=windalert&wf_token=f74404872fb9ccdb07dc6b485b4e6867" width="300" height="400" frameborder="0" scrolling="no" allowtransparency="no"></iframe>
+<iframe id="deersnap" align="top"  width="300" height="400" frameborder="0" scrolling="no" allowtransparency="no"></iframe>
 </div>
 
 <!--
@@ -229,12 +231,15 @@ Date.prototype.format = function (mask, utc) {
      	timestr += "&time_end="+now.format("yyyy-mm-dd%20HH:MM:ss");
 //alert(newsrc);
 	   // width has been 635
-     	newsrc += timestr+"&units_wind=mph&units_precip=in&fields=wind&wf_token=f74404872fb9ccdb07dc6b485b4e6867&color_plot_bg=0xFAFAFA&wind_speed_floor=31&graph_height=330&graph_width=1200&type=line3&format=raw&v=1.1&cb=1718748456369";
+     	newsrc += timestr+"&units_wind=mph&units_precip=in&fields=wind&wf_token=" + WF_TOKEN + "&color_plot_bg=0xFAFAFA&wind_speed_floor=31&graph_height=330&graph_width=1200&type=line3&format=raw&v=1.1&cb=1718748456369";
 	logsrc += timestr+"&units_wind=mph&units_precip=in&fields=wind&wf_token=358277d6b016eaf49ffd46a4f21de167&color_plot_bg=0xFAFAFA&wind_speed_floor=31&graph_height=330&graph_width=1200&type=line3&format=raw&v=1.1&cb=1718748456369";
      	document.getElementById("cscsix").src=newsrc+"&spot_id=1842";
 	document.getElementById("logansix").src=logsrc+"&spot_id=768";
 	document.getElementById("deersix").src=newsrc+"&spot_id=1784";   
     //document.getElementById("cscnow").src="https://api.weatherflow.com/wxengine/rest/graph/getGraph?spot_id=1842&time_start=2024-06-20%2000:00:00&time_end=2024-06-20%2024:00:00&units_wind=mph&units_precip=in&fields=wind&wf_token=d62e7292faf41f281bc57f338072dce0&color_plot_bg=0xFAFAFA&wind_speed_floor=31&graph_height=330&graph_width=635&type=line3&format=raw&v=1.1&cb=1718748456369";
-    </script>
+
+document.getElementById("cscsnap").src="https://widgets.windalert.com/widgets/web/conditions?spot_id=1842&units_wind=mph&units_temp=F&width=300&height=400&color=870100&name=Courageous%20Sailing%20Center&activity=Other&app=windalert%20&wf_token=" + WF_TOKEN;
+document.getElementById("deersnap").src = "https://widgets.windalert.com/widgets/web/conditions?spot_id=1784&units_wind=mph&units_temp=F&width=300&height=400&color=870100&name=Deer%20Island&activity=Other&app=windalert&wf_token=" + WF_TOKEN;
+   </script>
   
 </html>
