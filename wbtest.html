@@ -2,6 +2,9 @@
 <html>
 <!-- &wf_token=f74404872fb9ccdb07dc6b485b4e6867 -->
 	<head>
+		<script>
+			const WF_TOKEN = "f74404872fb9ccdb07dc6b485b4e6867";
+		</script>
   </head>
   <body>
     <table>
@@ -181,7 +184,7 @@ var sixearlier = new Date();
 newsrc = "https://api.weatherflow.com/wxengine/rest/graph/getGraph?spot_id=1842";
 newsrc += "&time_start="+sixearlier.format("yyyy-mm-dd%20HH:00:00");  // start on the hour for time alignment issues
 newsrc += "&time_end="+now.format("yyyy-mm-dd%20HH:MM:ss");
-newsrc += "&units_wind=mph&units_precip=in&fields=wind&wf_token=f74404872fb9ccdb07dc6b485b4e6867&color_plot_bg=0xFAFAFA&wind_speed_floor=31&graph_height=330&graph_width=635&type=line3&format=raw&v=1.1&cb=1718748456369"
+newsrc += "&units_wind=mph&units_precip=in&fields=wind&wf_token="+WF_TOKEN"+"&color_plot_bg=0xFAFAFA&wind_speed_floor=31&graph_height=330&graph_width=635&type=line3&format=raw&v=1.1&cb=1718748456369"
      
 
 document.getElementById("cscsix").src=newsrc;
