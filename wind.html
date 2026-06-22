@@ -196,7 +196,7 @@ Date.prototype.format = function (mask, utc) {
 <iframe align="top" name="wind-map" id="wind-map" src="https://widgets.windalert.com/widgets/web/windMap?w=600&h=450&c=870100&rp=18&m_m=t&search=42.37131,-71.05064&sn=Courageous Sailing Center&sid=1842&u_t=F&act=Other&app=windalert&wf_token=d62e7292faf41f281bc57f338072dce0" width="600" height="450" frameborder="0" scrolling="no" allowtransparency="no"></iframe>
 <br>
 	-->
-<iframe src="https://widgets.sailflow.com/widgets/web/windMap?w=650&h=550&c=0A2946&rp=18&m_m=t&csn=Courageous%20Sailing%20Center&search=44.38959,-68.20694&sid=1842&u_t=F&act=Sail&m_c=42.335,-70.974&m_z=12&app=sailflow&wf_token=f74404872fb9ccdb07dc6b485b4e6867" width="650" height="550"></iframe>
+<iframe id="wfmap"  width="650" height="550"></iframe>
 <br>
 
 <!--
@@ -240,6 +240,7 @@ Date.prototype.format = function (mask, utc) {
 
 document.getElementById("cscsnap").src="https://widgets.windalert.com/widgets/web/conditions?spot_id=1842&units_wind=mph&units_temp=F&width=300&height=400&color=870100&name=Courageous%20Sailing%20Center&activity=Other&app=windalert%20&wf_token=" + WF_TOKEN;
 document.getElementById("deersnap").src = "https://widgets.windalert.com/widgets/web/conditions?spot_id=1784&units_wind=mph&units_temp=F&width=300&height=400&color=870100&name=Deer%20Island&activity=Other&app=windalert&wf_token=" + WF_TOKEN;
+document.getElementById("wfmap").src="https://widgets.sailflow.com/widgets/web/windMap?w=650&h=550&c=0A2946&rp=18&m_m=t&csn=Courageous%20Sailing%20Center&search=44.38959,-68.20694&sid=1842&u_t=F&act=Sail&m_c=42.335,-70.974&m_z=12&app=sailflow&wf_token=" + WF_TOKEN;	   
    </script>
   
 </html>
