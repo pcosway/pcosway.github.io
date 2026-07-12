@@ -3,7 +3,7 @@
 <!-- &wf_token=141bb2206f822462fd50435f837bb00c -->
 	<head>
 		<script>
-			const WF_TOKEN = "8f77fd2f5f80c7fd3567324d6d8f206c";
+			const WF_TOKEN = "not a token";
 		</script>
 
   </head>
@@ -175,23 +175,43 @@ Date.prototype.format = function (mask, utc) {
 
 
 <script>
-var now = new Date();
-
-
-now.setHours(now.getHours() + 1);
-var sixearlier = new Date();
-	   sixearlier.setHours(sixearlier.getHours() -6);
-newsrc = "https://api.weatherflow.com/wxengine/rest/graph/getGraph?spot_id=1842";
-newsrc += "&time_start="+sixearlier.format("yyyy-mm-dd%20HH:00:00");  // start on the hour for time alignment issues
-newsrc += "&time_end="+now.format("yyyy-mm-dd%20HH:MM:ss");
-newsrc += "&units_wind=mph&units_precip=in&fields=wind&wf_token="+ WF_TOKEN +"&color_plot_bg=0xFAFAFA&wind_speed_floor=31&graph_height=330&graph_width=635&type=line3&format=raw&v=1.1&cb=1718748456369"
+async function fetchTokenAct() {
+	try {
+		// 1. Fetch the remote file
+		const response = await fetch('https://pcosway.github.io/wfdata.txt');
+    
+    	// 2. Check if the network response is successful 
+		if (!response.ok) {
+			throw new Error(`HTTP error on token fetch! Status: ${response.status}`);
+		}
+    
+    	// 3. Store the text content directly into WF_TOKEN
+    	const WF_TOKEN = await response.text();	
+		
+		var now = new Date();
+		
+		now.setHours(now.getHours() + 1);
+		var sixearlier = new Date();
+	   	sixearlier.setHours(sixearlier.getHours() -6);
+		newsrc = "https://api.weatherflow.com/wxengine/rest/graph/getGraph?spot_id=1842";
+		newsrc += "&time_start="+sixearlier.format("yyyy-mm-dd%20HH:00:00");  // start on the hour for time alignment issues
+		newsrc += "&time_end="+now.format("yyyy-mm-dd%20HH:MM:ss");
+		newsrc += "&units_wind=mph&units_precip=in&fields=wind&wf_token="+ WF_TOKEN +"&color_plot_bg=0xFAFAFA&wind_speed_floor=31&graph_height=330&graph_width=635&type=line3&format=raw&v=1.1&cb=1718748456369"
      
 
-document.getElementById("cscsix").src=newsrc;
-	snapsrc = "https://widgets.windalert.com/widgets/web/conditions?spot_id=1842&units_wind=mph&units_temp=F&width=300&height=400&color=870100&name=Courageous%20Sailing%20Center&activity=Other&app=windalert%20&wf_token=" + WF_TOKEN;
-	mapsrc = "https://widgets.sailflow.com/widgets/web/windMap?w=650&h=550&c=0A2946&rp=18&m_m=t&csn=Courageous%20Sailing%20Center&search=44.38959,-68.20694&sid=1842&u_t=F&act=Sail&m_c=42.335,-70.974&m_z=12&app=sailflow&wf_token=" + WF_TOKEN;
-	document.getElementById("wfsnap").src=snapsrc;
-	document.getElementById("wfmap").src=mapsrc;
+		document.getElementById("cscsix").src=newsrc;
+		snapsrc = "https://widgets.windalert.com/widgets/web/conditions?spot_id=1842&units_wind=mph&units_temp=F&width=300&height=400&color=870100&name=Courageous%20Sailing%20Center&activity=Other&app=windalert%20&wf_token=" + WF_TOKEN;
+		mapsrc = "https://widgets.sailflow.com/widgets/web/windMap?w=650&h=550&c=0A2946&rp=18&m_m=t&csn=Courageous%20Sailing%20Center&search=44.38959,-68.20694&sid=1842&u_t=F&act=Sail&m_c=42.335,-70.974&m_z=12&app=sailflow&wf_token=" + WF_TOKEN;
+		document.getElementById("wfsnap").src=snapsrc;
+		document.getElementById("wfmap").src=mapsrc;
+
+	} catch (error) {
+    	console.error('Failed to fetch token file:', error);
+	}
+}
+	
+fetchTokenAct();
+	
 </script>  
 	</foot>
 </html>
