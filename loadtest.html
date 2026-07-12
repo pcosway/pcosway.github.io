@@ -232,6 +232,9 @@ async function fetchTokenAct() {
     // 3. Store the text content directly into your variable
     const WF_TOKEN = await response.text();	   
     alert(WF_TOKEN);
+
+
+	  
 	  var now = new Date();
 	now.setHours(now.getHours() + 1);
      var midnight = new Date();
@@ -254,7 +257,11 @@ async function fetchTokenAct() {
 document.getElementById("cscsnap").src="https://widgets.windalert.com/widgets/web/conditions?spot_id=1842&units_wind=mph&units_temp=F&width=300&height=400&color=870100&name=Courageous%20Sailing%20Center&activity=Other&app=windalert%20&wf_token=" + WF_TOKEN;
 document.getElementById("deersnap").src = "https://widgets.windalert.com/widgets/web/conditions?spot_id=1784&units_wind=mph&units_temp=F&width=300&height=400&color=870100&name=Deer%20Island&activity=Other&app=windalert&wf_token=" + WF_TOKEN;
 document.getElementById("wfmap").src="https://widgets.sailflow.com/widgets/web/windMap?w=650&h=550&c=0A2946&rp=18&m_m=t&csn=Courageous%20Sailing%20Center&search=44.38959,-68.20694&sid=1842&u_t=F&act=Sail&m_c=42.335,-70.974&m_z=12&app=sailflow&wf_token=" + WF_TOKEN;	   
-}
+
+	  } catch (error) {
+    console.error('Failed to fetch the file:', error);
+  }
+  }
 
 	fetchTokenAct();
    </script>
