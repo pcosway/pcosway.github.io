@@ -233,6 +233,7 @@ async function fetchTokenAct() {
     	// 3. Store the text content directly into WF_TOKEN
     	const text = await response.text();	   
 		const regex = /wf_token=(\d+-\w)&/; 
+		alert(text);
 
 		const match = text.match(regex);
 
