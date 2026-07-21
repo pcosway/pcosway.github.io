@@ -1,0 +1,1 @@
+https://api.weatherflow.com/wxengine/rest/graph/getGraph?spot_id=1842&time_start=2026-07-19%2000:00:00&time_end=2026-07-19%2024:00:00&units_wind=kts&units_precip=in&fields=wind&wf_token=51e3ef927241ef01f8691c40bbe01b80&color_plot_bg=0xFAFAFA&wind_speed_floor=31&graph_height=330&graph_width=922&type=line3&format=raw&v=1.1&cb=1784587295122
