@@ -238,7 +238,7 @@ async function fetchTokenAct() {
 		const match = text.match(regex);
 
 if (match) {
-  const WF_TOKEN = match[1]; // Index 1 contains the first capturing group
+  WF_TOKEN = match[1]; // Index 1 contains the first capturing group
 }
 		alert(WF_TOKEN);
 		var now = new Date();
