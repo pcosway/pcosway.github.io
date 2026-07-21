@@ -233,14 +233,13 @@ async function fetchTokenAct() {
     	// 3. Store the text content directly into WF_TOKEN
     	const text = await response.text();	   
 		const regex = /wf_token=([^&]+)/; 
-		alert(text);
 
 		const match = text.match(regex);
 
 if (match) {
   WF_TOKEN = match[1]; // Index 1 contains the first capturing group
 }
-		alert(WF_TOKEN);
+
 		var now = new Date();
 		now.setHours(now.getHours() + 1);
      	var midnight = new Date();
