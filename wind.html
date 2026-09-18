@@ -224,6 +224,7 @@ async function fetchTokenAct() {
 	try {
 		// 1. Fetch the remote file
 		const response = await fetch('https://pcosway.github.io/wffull.txt');
+		const response = await fetch('https://pcosway.github.io/wffull.txt');
     
     	// 2. Check if the network response is successful 
 		if (!response.ok) {
@@ -231,7 +232,8 @@ async function fetchTokenAct() {
 		}
     
     	// 3. Store the text content directly into WF_TOKEN
-    	const text = await response.text();	   
+    	const text = await response.text();
+		alert(text);
 		const regex = /wf_token=([^&]+)/; 
 
 		const match = text.match(regex);
